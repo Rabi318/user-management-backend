@@ -8,6 +8,16 @@ This is the **Node.js + Express** backend API for a **Role-Based Access Control 
 
 - 🔗 **Backend API**: [API Endpoint](https://user-management-backend-3440.onrender.com)
 
+## Test Credentials
+
+### Admin
+- `Email`: alice@gmail.com
+- `Password`: 123456
+
+### User
+- `Email`: raghu@gmail.com
+- `Password`: pass123
+
 ## ✨ Features
 
 - 🛡️ **JWT Authentication**
