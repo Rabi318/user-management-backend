@@ -62,10 +62,7 @@ backend/
 
 Create a `.env` file in the root directory and add the following environment variables:
 
-<details>
-<summary><code>.env</code></summary>
-
-```env
+```
 PORT=3000
 MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/your-db
 JWT_SECRET=your_jwt_secret_key
