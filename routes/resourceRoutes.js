@@ -8,9 +8,13 @@ router.post("/", verifyToken, checkRole(["admin"]), async (req, res) => {
   try {
     const resource = new Resource({ ...req.body, createdBy: req.user._id });
     await resource.save();
+    const populatedResource = await Resource.findById(resource._id).populate(
+      "createdBy",
+      "name email role"
+    );
     res
       .status(201)
-      .json({ msg: "Resource created successfully", data: resource });
+      .json({ msg: "Resource created successfully", data: populatedResource });
   } catch (error) {
     console.log(error);
     res.status(500).json({ msg: "Error creating resource" });
