@@ -70,3 +70,33 @@ PORT=3000
 MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/your-db
 JWT_SECRET=your_jwt_secret_key
 ```
+## 📬 API Endpoints
+
+### 🔐 Auth
+
+| Method | Route         | Access | Description          |
+|--------|---------------|--------|----------------------|
+| POST   | `/api/register` | Public | Register new user     |
+| POST   | `/api/login`    | Public | Login & get token     |
+
+
+---
+
+### 👤 User (Admin Only)
+
+| Method | Route       | Access | Description     |
+|--------|-------------|--------|-----------------|
+| GET    | `/api/users` | Admin  | Get all users   |
+
+---
+
+### 📄 Resources
+
+| Method | Route                     | Access     | Description         |
+|--------|---------------------------|------------|---------------------|
+| GET    | `/api/resources`          | All Roles  | Get all resources   |
+| POST   | `/api/resources`          | Admin      | Create a resource   |
+| PUT    | `/api/resources/:id`      | Admin      | Update a resource   |
+| DELETE | `/api/resources/:id`      | Admin      | Delete a resource   |
+
+
